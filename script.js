@@ -11,7 +11,7 @@ let downloadBtn = document.querySelector('.downloadBtn');
 let reduce_q = document.getElementById('reduce');
 let aspect = document.getElementById('aspect');
 
-let imgageRatio;
+let imageRatio;
 
 fileInput.addEventListener('change', (e) =>{//creating a event listener change for fileinput
     let file = e.target.files[0];
@@ -23,7 +23,7 @@ fileInput.addEventListener('change', (e) =>{//creating a event listener change f
         box.classList.add('active');
         w_input.value = imgSrc.naturalWidth;
         h_input.value = imgSrc.naturalHeight;
-        imgageRatio = imgSrc.naturalWidth/imgSrc.naturalHeight;
+        imageRatio = imgSrc.naturalWidth/imgSrc.naturalHeight;
     })
 })
 
@@ -32,11 +32,11 @@ uploader.addEventListener('click', ()=>{//creating a event listener click for up
 });
 
 w_input.addEventListener('keyup', ()=>{//creating a event listener keyup for w_input
-let height = aspect.checked ? w_input.value / imgageRatio : h_input.value;
+let height = aspect.checked ? w_input.value / imageRatio : h_input.value;
 h_input.value = Math.floor(height);
 })
 h_input.addEventListener('keyup', ()=>{//creating a event listener keyup for h_input
-let width = aspect.checked ? h_input.value * imgageRatio : w_input.value;
+let width = aspect.checked ? h_input.value * imageRatio : w_input.value;
 w_input.value = Math.floor(width);
 })
 
