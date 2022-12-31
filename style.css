@@ -1,0 +1,142 @@
+/*for whole page*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  /*for body of the html page */
+  body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+    place-items: center;
+    display: grid;
+  }
+  /* invoking box class*/
+  .box {
+    width: 30%;
+    height: auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 5px;
+  }
+  /* invoking uploader class */
+  .uploader {
+    width: 100%;
+    height: 250px;
+    border: 2px dashed rgb(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+  }
+  
+  .box.active .uploader{border: none;}
+  
+  /* invoking image from uploader class*/
+
+  .uploader img {
+    transform: scale(1.4);
+  }
+  /* invoking image from .uploader .box.active class*/
+  .box.active .uploader img{
+    transform: scale(1);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+  
+  /* invoking label from active in box class*/
+  .box.active .uploader label{
+    display: none;
+  }
+  
+  /* invoking label from uploader class*/
+  .uploader label {
+    margin-top: 10px;
+  }
+  
+  /* invoking tools class*/
+  .tools {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    display: none;
+  }
+  
+  .box.active .tools{
+    display: block;
+  }
+
+  /* invoking w_h class which was inside tools class*/
+  .tools .w_h {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* invoking _input which was inside w_h class of tools class*/
+  .tools .w_h ._input{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    width: 47.5%;
+    margin: 0 10px;
+    text-transform: capitalize;
+  }
+
+  /* invoking input from _input class*/
+  ._input input{ height: 40px;
+    padding: 0 10px;
+    margin-top: 4px;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.452);
+    border-radius: 4px;}
+  
+    /* invoking class checked_tools */
+    .checked_tools {
+      margin-top: 15px;
+    }
+    
+    /*invoking input from ._ratio class in checked_tools class*/
+    .checked_tools ._ratio input[type="checkbox"] {
+      transform: scale(1.1);
+    }
+    .checked_tools hr {
+      margin: 5px 0;
+      opacity: 0.3;
+    }
+
+    /*invoking class downloadBtn*/
+    .downloadBtn {
+      width: 100%;
+      height: 50px;
+      margin-top: 20px;
+      background-image: linear-gradient(90deg, #fbda61 0%, #5c0370 90%);
+      border: none;
+      outline: none;
+      text-transform: capitalize;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 4px;
+      color: #fff;
+    }
+  
+    /* media queries */
+  @media (max-width: 768px) {
+    .box {
+      width: 60%;
+    }
+  }
+  /* media queries */
+  @media (max-width: 1068px) {
+    .box {
+      width: 80%;
+    }
+  }
+    

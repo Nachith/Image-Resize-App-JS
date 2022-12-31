@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Resizer APP-JS</title><!--title of our page-->
+    <link rel="stylesheet" href="css/style.css" /><!--linking my external css file to html-->
+  </head>
+  <body>
+    <div class="box"><!--creating a box class-->
+      <div class="uploader"> <!--creating a uploader class-->
+          <input type="file" id="file" hidden><!--creating input type-->
+          <img src="./cloud-upload-svgrepo-com.svg" alt=""><!--uploading the image-->
+          <label for="file">Browse Files to Upload</label> <!--labeling the content-->
+      </div>
+      <div class="tools"> <!--creating class tools-->
+        <div class="w_h"><!--creating class width and height-->
+            <div class="_input"><!--creating class input-->
+                <label for="width">Width</label>
+                <input type="number" name="" id="width"><!--creating input type number-->
+          </div>  
+          <div class="_input"><!--creating class input-->
+            <label for="height">height</label>
+            <input type="number" name="" id="height">
+          </div>  
+        </div>
+        <div class="checked_tools"><!--creating class checked_tools-->
+            <div class="_ratio">
+                <input type="checkbox" name="" id="aspect">
+                <label for="aspect">Lock Aspect Ratio</label>
+            </div>
+            <hr>
+            <div class="_ratio">
+                <input type="checkbox" name="" id="reduce"><!--creating input type checkbox-->
+                <label for="reduce">Reduce Quality</label>
+            </div>
+        </div>
+        
+        <button class="downloadBtn">Download Image</button>
+      </div>
+    </div>
+    <script src="js/script.js"></script><!--linking javascript file to html-->
+  </body>
+</html>
